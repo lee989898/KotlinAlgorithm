@@ -3,19 +3,27 @@ import java.io.InputStreamReader
 import java.util.*
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
-    val order = StringTokenizer(readLine(), " ").nextToken().toInt()
-    var result = 0
-    var num = 0
-    var count = 0
-    while (true) {
-        if (num.toString().contains("666")) {
-            count++
-            if (count == order) {
-                result = num
-                break
+    var order = StringTokenizer(readLine(), " ").nextToken().toInt()
+    var result = 665
+
+    while (order != 0) {
+        result++
+        var count = 0
+        var tmp = result
+
+        while (tmp > 0) {
+            if (tmp % 10 == 6) {
+                count++
+            } else {
+                count = 0
+            }
+
+            tmp /= 10
+
+            if (count == 3) {
+                order--
             }
         }
-        num++
     }
     println(result)
 }
