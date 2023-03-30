@@ -4,18 +4,19 @@ import java.util.StringTokenizer
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val stringTokenizer = StringTokenizer(readLine(), " ")
-    var sugar = stringTokenizer.nextToken().toInt()
-    var num = 0
+    val sugar = stringTokenizer.nextToken().toInt()
+    var numBag = 0
+    var remainingSugar = sugar
 
     while (true) {
-        if (sugar % 5 == 0) {
-            print("${sugar / 5 + num}")
+        if (remainingSugar % 5 == 0) {
+            print("${remainingSugar / 5 + numBag}")
             break
-        } else if (sugar <= 0) {
+        } else if (remainingSugar <= 0) {
             print(-1)
             break
         }
-        sugar -= 3
-        num++
+        remainingSugar -= 3
+        numBag++
     }
 }
