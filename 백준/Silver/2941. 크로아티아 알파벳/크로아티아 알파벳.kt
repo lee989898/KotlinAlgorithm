@@ -7,19 +7,14 @@ import java.util.StringTokenizer
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val word = readln()
+    var word = readln()
 
-    val newWord = word
-        .replace("c=", "1")
-        .replace("c-", "1")
-        .replace("dz=", "1")
-        .replace("d-", "1")
-        .replace("lj", "1")
-        .replace("nj", "1")
-        .replace("s=", "1")
-        .replace("z=", "1")
-
-    bw.write(newWord.length.toString())
+    val croatiaWords = arrayOf("c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z=")
+    for (croatiaWord in croatiaWords) {
+        word = word.replace(croatiaWord, "1")
+    }
+    
+    bw.write(word.length.toString())
     bw.flush()
     bw.close()
     close()
