@@ -7,9 +7,9 @@ import java.util.StringTokenizer
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val num = readln().toList()
+    val num = readln().toCharArray().sortedDescending()
 
-    num.sortedDescending().forEach { bw.write("$it") }
+    num.forEach { bw.write("$it") }
     bw.flush()
     bw.close()
     close()
