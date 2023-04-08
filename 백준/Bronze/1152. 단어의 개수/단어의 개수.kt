@@ -7,17 +7,7 @@ import java.util.StringTokenizer
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val stringTokenizer = StringTokenizer(readln(), " ")
-    val words = mutableListOf<String>()
-
-    while (stringTokenizer.hasMoreTokens()) {
-        val word = stringTokenizer.nextToken()
-        if (word.isNotBlank()) {
-            words.add(word)
-        }
-    }
-
-    bw.write("${words.size}")
+    bw.write("${StringTokenizer(readln(), " ").countTokens()}")
 
     bw.flush()
     bw.close()
