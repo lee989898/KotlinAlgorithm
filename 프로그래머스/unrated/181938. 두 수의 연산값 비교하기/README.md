@@ -1,10 +1,10 @@
 # [unrated] 두 수의 연산값 비교하기 - 181938 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181938?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181938) 
 
 ### 성능 요약
 
-메모리: 61.9 MB, 시간: 11.49 ms
+메모리: 62.1 MB, 시간: 11.31 ms
 
 ### 구분
 
