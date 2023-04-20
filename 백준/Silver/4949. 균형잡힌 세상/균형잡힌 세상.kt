@@ -18,23 +18,20 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
         for (char in string) {
             when (char) {
                 '(' -> stack.push('(')
-
                 '[' -> stack.push('[')
-                ')' -> if (stack.isNotEmpty() && stack.last() == '(') {
+                ')' -> if (stack.isNotEmpty() && stack.peek() == '(') {
                     stack.pop()
                 } else {
                     isStack = false
                 }
-
-                ']' -> if (stack.isNotEmpty() && stack.last() == '[') {
+                ']' -> if (stack.isNotEmpty() && stack.peek() == '[') {
                     stack.pop()
                 } else {
                     isStack = false
                 }
             }
         }
-
-
+        
         if (stack.size == 0 && isStack) {
             bw.write("yes\n")
         } else {
