@@ -8,18 +8,18 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
     val num = readln().toInt()
-    val queue: Deque<Int> = LinkedList()
+    val queue: Queue<Int> = LinkedList()
 
     (1..num).forEach { queue.add(it) }
 
     while (queue.size != 1) {
-        queue.pollFirst()
-        queue.addLast(queue.peekFirst())
-        queue.pollFirst()
+        queue.poll()
+        queue.add(queue.element())
+        queue.poll()
     }
 
-    bw.write("${queue.peek()}")
-    
+    bw.write("${queue.element()}")
+
     bw.flush()
     bw.close()
     close()
