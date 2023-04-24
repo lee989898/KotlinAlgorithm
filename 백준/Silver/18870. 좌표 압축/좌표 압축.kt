@@ -8,9 +8,11 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
 
     val num = readln().toInt()
     val list = readln().split(" ").map { it.toInt() }
-    val sortedArr = list.distinct().sorted()
-    for(i in 0 until num) {
-        bw.write("${sortedArr.binarySearch(list[i])} ")
+
+    val sortedList = list.distinct().sorted()
+
+    for (element in list) {
+        bw.write("${sortedList.binarySearch(element)} ")
     }
 
     bw.flush()
