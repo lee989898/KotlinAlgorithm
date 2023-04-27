@@ -1,47 +1,35 @@
-import java.io.BufferedReader
-import java.io.BufferedWriter
-import java.io.InputStreamReader
-import java.io.OutputStreamWriter
+import java.io.*
 
-val parent = IntArray(1000001)
+val parent = IntArray(1000001) { it }
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val (v, e) = readln().split(" ").map { it.toInt() }
-
-    for (i in 1..v) {
-        parent[i] = i
-    }
+    val (v, e) = br.readLine().split(" ").map(String::toInt)
 
     repeat(e) {
-        val (n, a, b) = readln().split(" ").map { it.toInt() }
+        val (n, a, b) = br.readLine().split(" ").map(String::toInt)
 
         if (n == 0) {
-            unionParent2(a, b)
+            union(a, b)
         } else {
-            if (findParent(a) == findParent(b)) {
-                bw.write("YES\n")
-            } else {
-                bw.write("NO\n")
-            }
+            bw.write(if (find(a) == find(b)) "YES\n" else "NO\n")
         }
-
     }
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
 
-fun findParent(x: Int): Int {
-    return if (x == parent[x]) x else findParent(parent[x]).also { parent[x] = it }
+fun find(x: Int): Int {
+    return if (x == parent[x]) x else {
+        parent[x] = find(parent[x])
+        parent[x]
+    }
 }
 
-fun unionParent2(_a: Int, _b: Int) {
-    var a = _a
-    var b = _b
-    a = findParent(a)
-    b = findParent(b)
-    if (a < b) parent[b] = a else parent[a] = b
+fun union(a: Int, b: Int) {
+    parent[find(b)] = find(a)
 }
