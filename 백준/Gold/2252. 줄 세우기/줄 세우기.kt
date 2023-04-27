@@ -12,14 +12,14 @@ fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val (N, M) = br.readLine().split(" ").map { it.toInt() }
+    val (N, M) = br.readLine().split(" ").map(String::toInt)
 
     repeat(N + 1) {
         graph.add(ArrayList())
     }
 
     repeat(M) {
-        val (a, b) = br.readLine().split(" ").map { it.toInt() }
+        val (a, b) = br.readLine().split(" ").map(String::toInt)
         graph[a].add(b)
         indegree[b] += 1
     }
