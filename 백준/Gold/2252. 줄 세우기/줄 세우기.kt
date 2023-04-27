@@ -33,7 +33,7 @@ fun main() {
 
 fun topologySort(n: Int) {
     val result = ArrayList<Int>()
-    val q : Queue<Int> = LinkedList()
+    val q: Queue<Int> = LinkedList()
 
     for (i in 1..n) {
         if (indegree[i] == 0) {
@@ -45,11 +45,11 @@ fun topologySort(n: Int) {
         val now = q.poll()
         result.add(now)
 
-        for (i in graph[now].indices) {
-            indegree[graph[now][i]] -= 1
+        for (next in graph[now]) {
+            indegree[next] -= 1
 
-            if (indegree[graph[now][i]] == 0) {
-                q.offer(graph[now][i])
+            if (indegree[next] == 0) {
+                q.offer(next)
             }
         }
     }
