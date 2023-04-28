@@ -1,5 +1,3 @@
 class Solution {
-    fun solution(numbers: IntArray): List<Int> {
-        return numbers.map { it * 2 }
-    }
+    fun solution(numbers: IntArray) = numbers.map { it * 2 }
 }
