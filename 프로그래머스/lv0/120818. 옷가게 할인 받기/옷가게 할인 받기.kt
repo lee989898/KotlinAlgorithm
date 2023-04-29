@@ -1,8 +1,8 @@
 class Solution {
-    fun solution(price: Int): Int = when (price) {
-        in 100000 until 300000 -> price - price * 0.05
-        in 300000 until 500000 -> price - price * 0.1
-        in 500000..1000000 -> price - price * 0.2
-        else -> price
+    fun solution(price: Int) = when (price) {
+        in 10 until 100_000 -> price
+        in 100_000 until 300_000 -> price * 0.95
+        in 300_000 until 500_000 -> price * 0.90
+        else -> price * 0.80
     }.toInt()
 }
