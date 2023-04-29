@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(n: Int) = (0..n).filter { it % 2 != 0 }.toIntArray()
+    fun solution(n: Int) = (1..n).filter { it % 2 != 0 }
 }
