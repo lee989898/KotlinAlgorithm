@@ -1,9 +1,3 @@
 class Solution {
-    fun solution(sides: IntArray): Int {
-        val arr = sides.sorted()
-        return if (arr[2] < arr[0] + arr[1])
-            1
-        else
-            2
-    }
+    fun solution(sides: IntArray) = if (sides.sum() - (sides.maxOrNull()!! * 2) > 0) 1 else 2
 }
