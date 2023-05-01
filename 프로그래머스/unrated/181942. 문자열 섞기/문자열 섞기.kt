@@ -1,13 +1,9 @@
 class Solution {
 
-    fun solution(str1: String, str2: String): String {
-        val stringBuilder = StringBuilder()
-
+    fun solution(str1: String, str2: String) = StringBuilder().apply {
         str1.zip(str2).forEach {
-            stringBuilder.append(it.first)
-            stringBuilder.append(it.second)
+            append(it.first)
+            append(it.second)
         }
-        
-        return stringBuilder.toString()
-    }
+    }.toString()
 }
