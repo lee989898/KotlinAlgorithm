@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(num: Int, k: Int) = "t$num".indexOf(k.toString())
+    fun solution(num: Int, k: Int) = "-$num".indexOf(k.toString())
 }
