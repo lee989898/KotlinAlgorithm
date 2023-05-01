@@ -1,4 +1,3 @@
 class Solution {
-    fun solution(s: String) =
-        "${s.split(" ").minOfOrNull { it.toInt() }} ${s.split(" ").maxOfOrNull { it.toInt() }}"
+    fun solution(s: String) = s.split(" ").map { it.toInt() }.let { "${it.minOrNull()} ${it.maxOrNull()}" }
 }
