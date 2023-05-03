@@ -1,9 +1,7 @@
 import kotlin.math.max
 
 class Solution {
-    fun solution(num_list: IntArray) = num_list.let { nums ->
-        val odd = nums.filterIndexed { index, i -> (index + 1) % 2 == 0 }.sum()
-        val even = nums.filterIndexed { index, i -> (index + 1) % 2 != 0 }.sum()
-        max(odd, even)
+    fun solution(num_list: IntArray) = num_list.indices.partition { it % 2 == 1 }.let { (oddList, evenList) ->
+        max(oddList.sumOf { num_list[it] }, evenList.sumOf { num_list[it] })
     }
 }
