@@ -1,7 +1,11 @@
-import kotlin.math.sqrt
-
 class Solution {
-    fun solution(n: Long) = n.toDouble().let {
-        if (sqrt(it).toLong() * sqrt(it).toLong() == it.toLong()) ((sqrt(it) + 1L) * (sqrt(it) + 1L)).toLong() else -1
+    fun solution(n: Long): Long {
+        for (i in 1..n) {
+            if (i * i == n) {
+                return (i + 1L) * (i + 1L)
+            }
+        }
+        
+        return -1
     }
 }
