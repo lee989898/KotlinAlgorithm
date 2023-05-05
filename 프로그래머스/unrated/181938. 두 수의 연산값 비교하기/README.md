@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 62.1 MB, 시간: 11.31 ms
+메모리: 61.1 MB, 시간: 9.66 ms
 
 ### 구분
 
@@ -64,14 +64,18 @@ Empty
 <p>입출력 예 #1</p>
 
 <ul>
-<li><code>a</code> ⊕ <code>b</code> = 291 이고, <code>2 * a * b</code> = 728 입니다. 둘 중 더 큰 값은 364 이므로 364를 return 합니다.</li>
+<li><code>a</code> ⊕ <code>b</code> = 291 이고, <code>2 * a * b</code> = 364 입니다. 둘 중 더 큰 값은 364 이므로 364를 return 합니다.</li>
 </ul>
 
 <p>입출력 예 #2</p>
 
 <ul>
-<li><code>a</code> ⊕ <code>b</code> = 912 이고, <code>2 * a * b</code> = 728 입니다. 둘 중 더 큰 값은 912 이므로 912를 return 합니다.</li>
+<li><code>a</code> ⊕ <code>b</code> = 912 이고, <code>2 * a * b</code> = 364 입니다. 둘 중 더 큰 값은 912 이므로 912를 return 합니다.</li>
 </ul>
+
+<hr>
+
+<p>※ 2023년 04월 27일 입출력 예 설명이 수정되었습니다.</p>
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
