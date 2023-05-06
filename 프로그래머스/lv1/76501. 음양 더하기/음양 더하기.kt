@@ -1,4 +1,4 @@
 class Solution {
     fun solution(absolutes: IntArray, signs: BooleanArray) =
-        absolutes.zip(signs.toTypedArray()).sumOf { (a, b) -> if (b) a else -a }
+        absolutes.foldIndexed(0) { index, acc, i -> if (signs[index]) acc +i else acc - i }
 }
