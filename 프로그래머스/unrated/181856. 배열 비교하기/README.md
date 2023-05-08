@@ -1,10 +1,10 @@
 # [unrated] 배열 비교하기 - 181856 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181856?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181856) 
 
 ### 성능 요약
 
-메모리: 62.1 MB, 시간: 0.02 ms
+메모리: 60.9 MB, 시간: 0.02 ms
 
 ### 구분
 
