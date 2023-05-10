@@ -1,10 +1,10 @@
 # [level 1] 없는 숫자 더하기 - 86051 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86051?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86051) 
 
 ### 성능 요약
 
-메모리: 64.1 MB, 시간: 22.81 ms
+메모리: 64 MB, 시간: 23.45 ms
 
 ### 구분
 
