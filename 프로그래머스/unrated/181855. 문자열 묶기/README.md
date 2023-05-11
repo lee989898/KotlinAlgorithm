@@ -1,10 +1,10 @@
 # [unrated] 문자열 묶기 - 181855 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855) 
 
 ### 성능 요약
 
-메모리: 93.4 MB, 시간: 21.69 ms
+메모리: 94.1 MB, 시간: 11.32 ms
 
 ### 구분
 
