@@ -1,21 +1,15 @@
 class Solution {
     fun solution(N: Int, stages: IntArray): IntArray {
-        var answer = intArrayOf()
-        var people = stages
-        val double = mutableListOf<Double>()
-
-        repeat(N) { stage ->
-            double += people.count { it <= stage + 1 } / people.size.toDouble()
-            people = people.filter { it != stage + 1 }.toIntArray()
+        val failureRates = mutableListOf<Pair<Int, Double>>()
+        for (stage in 1..N) {
+            val totalPlayers = stages.count { it >= stage }
+            val playersInStage = stages.count { it == stage }
+            val failureRate = if (totalPlayers == 0) 0.0 else playersInStage.toDouble() / totalPlayers.toDouble()
+            failureRates.add(stage to failureRate)
         }
-        
-        (1..N).toList().zip(double).sortedWith(
-            compareBy(
-                { -it.second },
-                { it.first }
-            )
-        ).forEach { answer += it.first }
 
-        return answer
+        failureRates.sortWith(compareByDescending<Pair<Int, Double>> { it.second }.thenBy { it.first })
+
+        return failureRates.map { it.first }.toIntArray()
     }
 }
