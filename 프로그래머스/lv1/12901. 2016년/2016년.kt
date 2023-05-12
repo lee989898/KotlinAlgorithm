@@ -1,19 +1,13 @@
 class Solution {
-    fun solution(a: Int, b: Int) =
-        when ((a * 30 + b + 2 +
-                if (a == 1 || a == 3) 0
-                else if (a == 2 || a == 4 || a == 5) 1
-                else if (a == 6 || a == 7) 2
-                else if (a == 8) 3
-                else if (a == 9 || a == 10) 4
-                else 5) % 7
-        ) {
-            1 -> "MON"
-            2 -> "TUE"
-            3 -> "WED"
-            4 -> "THU"
-            5 -> "FRI"
-            6 -> "SAT"
-            else -> "SUN"
-        }
+    fun solution(a: Int, b: Int): String {
+        val days = listOf("THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED")
+        val lastDays = listOf(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+
+        val result = (0 until a - 1).map {
+            lastDays[it]
+        }.sum() + b
+
+
+        return days[result % 7]
+    }
 }
