@@ -2,19 +2,19 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
-    var stringTokenizer = StringTokenizer(readln())
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
-    var num = 1
 
-    repeat(stringTokenizer.nextToken().toInt()) {
-        stringTokenizer = StringTokenizer(readln(), " ")
-        val num1 = stringTokenizer.nextToken().toInt()
-        val num2 = stringTokenizer.nextToken().toInt()
-        bw.write("Case #${num++}: $num1 + $num2 = " + (num1 + num2).toString() + "\n")
+    val num = br.readLine().toInt()
+
+    repeat(num) {
+        val (a, b) = br.readLine().split(" ").map { it.toInt() }
+        bw.write("Case #${it+1}: ${a} + ${b} = ${a + b}\n")
     }
+
     bw.flush()
     bw.close()
+    br.close()
 }
