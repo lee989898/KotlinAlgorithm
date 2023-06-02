@@ -2,20 +2,21 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
+import java.util.Collections
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val students = MutableList(30) { 0 }
+    val array = Array(30) { 0 }
 
     repeat(28) {
-        students[readln().toInt() - 1]++
+        array[br.readLine().toInt() - 1]++
     }
 
-    students.forEachIndexed { index, student -> if (student == 0) bw.write("${index + 1}\n") }
+    array.forEachIndexed { index, i -> if (i == 0) println(index + 1) }
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
