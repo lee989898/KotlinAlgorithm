@@ -2,25 +2,19 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
+import java.util.Collections
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val nums = mutableListOf<Double>()
-    val count = readln().toInt()
-    val stringTokenizer = StringTokenizer(readln(), " ")
+    val num = br.readLine().toInt()
+    val list = br.readLine().split(" ").map { it.toInt() }
+    val max = list.max().toDouble()
 
-    while (stringTokenizer.hasMoreTokens()) {
-        nums.add(stringTokenizer.nextToken().toDouble())
-    }
-
-    val M = nums.max()
-    val numss = nums.map { it / M * 100 }
-
-    bw.write("${numss.average()}")
+    bw.write("${list.sumOf { it / max } * 100 / num}")
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
