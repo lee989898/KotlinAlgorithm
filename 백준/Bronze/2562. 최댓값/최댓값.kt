@@ -2,21 +2,22 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val nums = mutableListOf<Int>()
+    val array = Array(9) { 0 }
 
     repeat(9) {
-        nums.add(StringTokenizer(readln()).nextToken().toInt())
+        array[it] = br.readLine().toInt()
     }
-    val max = nums.max()
 
-    nums.forEachIndexed { index, num -> if (num == max) bw.write("$max\n${index+1}") }
+    val max = array.max()
+
+    bw.write("${max}\n${array.indexOf(max) + 1}")
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
