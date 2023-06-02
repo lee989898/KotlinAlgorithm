@@ -2,20 +2,19 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
     while (true) {
-        val stringTokenizer = StringTokenizer(readln(), " ")
-        val num1 = stringTokenizer.nextToken().toInt()
-        val num2 = stringTokenizer.nextToken().toInt()
-        if (num1 == 0 && num2 == 0)
+        val (a, b) = br.readLine().split(" ").map { it.toInt() }
+        if (a == b && b == 0)
             break
-        bw.write((num1 + num2).toString() + "\n")
+        bw.write("${a + b}\n")
     }
 
     bw.flush()
     bw.close()
+    br.close()
 }
