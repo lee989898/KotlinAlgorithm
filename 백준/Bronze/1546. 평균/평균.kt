@@ -12,8 +12,8 @@ fun main() {
     val list = br.readLine().split(" ").map { it.toInt() }
     val max = list.max().toDouble()
 
-    bw.write("${list.sumOf { it / max } * 100 / num}")
-
+    bw.write("${list.sumOf { it / max * 100 } / num}")
+    
     bw.flush()
     bw.close()
     br.close()
