@@ -2,22 +2,25 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val num = readln().toInt()
+    val count = br.readLine().toInt()
 
-    repeat(num) {
-        val stringTokenizer = StringTokenizer(readln(), " ")
-        val count = stringTokenizer.nextToken().toInt()
-        val word = stringTokenizer.nextToken()
+    repeat(count) {
+        val (num, str) = br.readLine().split(" ")
 
-        bw.write(word.map { it.toString().repeat(count) }.joinToString("") + "\n")
+        for (index in str.indices) {
+            repeat(num.toInt()) {
+                bw.write("${str[index]}")
+            }
+        }
+        bw.write("\n")
     }
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
