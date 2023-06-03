@@ -7,12 +7,12 @@ fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val (a, b) = br.readLine().split(" ").map { it.toList().reversed().joinToString("").toInt() }
+    val (a, b) = br.readLine().split(" ").map { it.reversed() }
 
     if (a > b) {
-        bw.write("$a")
+        bw.write(a)
     } else {
-        bw.write("$b")
+        bw.write(b)
     }
 
     bw.flush()
