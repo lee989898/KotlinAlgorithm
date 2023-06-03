@@ -2,23 +2,22 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val word = readln()
-    val alphabet = MutableList(26) { -1 }
+    val alphabet = Array(26) { -1 }
+    val str = br.readLine().map { it - 'a' }
 
-    for (index in word.indices) {
-        if (alphabet[word[index] - 'a'] == -1) {
-            alphabet[word[index] - 'a'] = index
-        }
+    for (index in str.indices) {
+        if (alphabet[str[index]] == -1)
+            alphabet[str[index]] = index
     }
 
     alphabet.forEach { bw.write("$it ") }
 
     bw.flush()
     bw.close()
-    close()
+    br.close()
 }
