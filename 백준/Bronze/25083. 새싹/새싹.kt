@@ -1,9 +1,10 @@
 fun main() {
-    print("""         ,r'"7
+    print(
+        """         ,r'"7
 r`-_   ,'  ,/
  \. ". L_r'
    `~\/
       |
-      |
-    """.trimIndent())
+      |""".trimIndent()
+    )
 }
