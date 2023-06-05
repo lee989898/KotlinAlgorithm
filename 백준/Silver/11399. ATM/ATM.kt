@@ -8,17 +8,17 @@ fun main() {
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
     val n = br.readLine().toInt()
-    val atmUsingTime = br.readLine().split(" ").map { it.toInt() }.sorted()
-    
-    var result = 0
+    val seconds = br.readLine().split(" ").map { it.toInt() }
 
-    for (i in atmUsingTime.indices) {
-        for (j in 0..i) {
-            result += atmUsingTime[j]
-        }
+    var accumulateSecond = 0
+    var totalTime = 0
+
+    for (second in seconds.sorted()) {
+        accumulateSecond += second
+        totalTime += accumulateSecond
     }
 
-    bw.write("$result")
+    bw.write("$totalTime")
 
     bw.flush()
     bw.close()
