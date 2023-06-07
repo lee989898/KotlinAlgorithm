@@ -1,15 +1,6 @@
-import sys
+array = input()
 
-input = sys.stdin.readline
-
-n = input().rstrip()
-nums = []
-
-for index in range(len(n)):
-    nums.append(int(n[index]))
-
-nums.sort(reverse=True)
-
-for num in nums:
-    print(num,end='')
-
+for i in range(9, -1, -1):
+    for j in array:
+        if int(j) == i:
+            print(i, end='')
