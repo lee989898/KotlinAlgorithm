@@ -1,10 +1,10 @@
 n = int(input())
-nums = set(map(int, input().split()))
+array = set(map(int, input().split()))
 m = int(input())
-find_nums = list(map(int, input().split()))
+x = list(map(int, input().split()))
 
-for find_num in find_nums:
-    if find_num in nums:
-        print(1)
+for i in x:
+    if i not in array:
+        print('0')
     else:
-        print(0)
+        print('1')
