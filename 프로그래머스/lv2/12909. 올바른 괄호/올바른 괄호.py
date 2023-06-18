@@ -1,18 +1,6 @@
-from collections import deque
-
 def solution(s):
-    answer = True
-    queue = []
-    
-    for index in range(len(s)):
-        if s[index] == '(':
-            queue.append('(')
-        elif queue:
-            queue.pop()
-        else:
-            answer = False
-    
-    if len(queue) != 0:
-        answer = False
-    
-    return answer
+    pair = 0
+    for x in s:
+        if pair < 0: break
+        pair = pair + 1 if x == "(" else pair - 1 if x == ")" else pair
+    return pair == 0
