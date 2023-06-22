@@ -1,6 +1,13 @@
-import kotlin.math.max
-import kotlin.math.min
+import kotlin.math.*
 
 class Solution {
-    fun solution(a: Int, b: Int): Long = (min(a,b).toLong()..max(a,b).toLong()).sum()
+    fun solution(a: Int, b: Int): Long {
+        var answer: Long = 0
+        
+        for(i in (min(a,b)..max(a,b))) {
+            answer += i
+        }
+        
+        return answer
+    }
 }
