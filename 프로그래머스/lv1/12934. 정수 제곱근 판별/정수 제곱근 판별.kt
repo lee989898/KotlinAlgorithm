@@ -1,16 +1,10 @@
-import kotlin.math.*
-
 class Solution {
     fun solution(n: Long): Long {
-        var answer: Long = 0
-        val sqrt = sqrt(n.toDouble()).toLong()
-        
-        if ((sqrt * sqrt) == n) {
-            answer = (sqrt + 1L) * (sqrt.toLong() + 1L)
+        val sqrt = Math.sqrt(n.toDouble())
+        return if(sqrt % 1.0 == 0.0) {
+            Math.pow(sqrt + 1, 2.0).toLong()
         } else {
-            answer = -1
+            -1L
         }
-        
-        return answer
     }
 }
