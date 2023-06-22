@@ -1,16 +1,3 @@
 class Solution {
-    fun solution(price: Int, money: Int, count: Int): Long {
-        var answer: Long = -1
-        var total = 0L
-        
-        for (i in price..price * count step price) {
-            total += i
-        }
-        
-        if (total > money) {
-            return total - money 
-        } else {
-            return 0
-        }
-    }
+    fun solution(price: Int, money: Int, count: Int) = (1..count).map { it * price.toLong() }.sum().let { if(money > it) 0 else it - money }
 }
