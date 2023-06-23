@@ -3,9 +3,9 @@ import kotlin.math.*
 class Solution {
     fun solution(answers: IntArray): IntArray {
         val answer = mutableListOf<Int>()
-        val one = listOf(1, 2, 3, 4, 5) // 5
-        val two = listOf(2, 1, 2, 3, 2, 4, 2, 5) // 8
-        val three = listOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5) // 10
+        val one = listOf(1, 2, 3, 4, 5)
+        val two = listOf(2, 1, 2, 3, 2, 4, 2, 5)
+        val three = listOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)
 
         var (a, b, c) = listOf(0, 0, 0)
 
@@ -21,8 +21,6 @@ class Solution {
             }
         }
         val max = listOf(a, b, c).maxOrNull()
-
-        print("$a $b $c $max")
 
         if (a == max) {
             answer.add(1)
