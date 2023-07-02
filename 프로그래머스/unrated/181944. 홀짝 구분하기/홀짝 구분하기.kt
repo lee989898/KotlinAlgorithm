@@ -1,7 +1,1 @@
-fun main(args: Array<String>) {
-    val a = readln().toInt()
-    if(a % 2 == 0)
-        print("$a is even")
-    else
-        print("$a is odd")
-}
+fun main(args: Array<String>) = readln().toInt().let { if(it % 2 == 0) print("$it is even") else print("$it is odd")}
