@@ -1,4 +1,4 @@
 fun main(args: Array<String>) {
-    val s1 = readLine()!!
-    print(s1.map { if (it.isUpperCase()) it.lowercase() else it.uppercase() }.joinToString(""))
+    val s1 = readln()
+    print(s1.map { if (it in 'a'..'z') it.uppercase() else it.lowercase() }.joinToString(""))
 }
