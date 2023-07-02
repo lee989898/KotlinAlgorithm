@@ -1,4 +1,3 @@
 fun main(args: Array<String>) {
-    val (a, b) = readLine()!!.split(' ').map(String::toInt)
-    println("$a + $b = ${a+b}")
+    readLine()!!.split(' ').map(String::toInt).let { print("${it[0]} + ${it[1]} = ${it[0] + it[1]}")}
 }
