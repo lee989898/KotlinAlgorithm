@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(n: Int) = n.toString().map { it.digitToInt() }.sum()
+    fun solution(n: Int) = n.toString().sumOf { it.digitToInt() }
 }
