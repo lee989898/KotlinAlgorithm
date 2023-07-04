@@ -1,13 +1,3 @@
 class Solution {
-    fun solution(a: Int, d: Int, included: BooleanArray): Int {
-        var answer: Int = 0
-
-        repeat(included.size) {
-            if (included[it]) {
-                answer += a + d * it
-            }
-        }
-
-        return answer
-    }
+    fun solution(a: Int, d: Int, included: BooleanArray) = (a until a + d * included.size step d).toList().zip(included.toList()).filter { it.second }.sumOf { it.first }
 }
