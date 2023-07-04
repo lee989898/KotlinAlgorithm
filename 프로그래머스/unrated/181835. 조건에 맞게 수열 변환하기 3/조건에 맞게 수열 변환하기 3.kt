@@ -1,5 +1,3 @@
 class Solution {
-    fun solution(arr: IntArray, k: Int) = arr.map {
-        if(k % 2 == 0) it + k else it * k
-    }
+    fun solution(arr: IntArray, k: Int) = if(k % 2 == 0) arr.map { it + k } else arr.map { it * k }
 }
