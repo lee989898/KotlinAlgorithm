@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(numList: IntArray) = numList.partition { it % 2 == 0 }.toList().sumOf { it.joinToString("").toInt() }
+    fun solution(num_list: IntArray) = num_list.filter { it % 2 != 0 }.joinToString("").toInt() + num_list.filter { it % 2 == 0 }.joinToString("").toInt()
 }
