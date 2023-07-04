@@ -1,10 +1,10 @@
 # [unrated] 접미사인지 확인하기 - 181908 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181908?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181908) 
 
 ### 성능 요약
 
-메모리: 60.9 MB, 시간: 6.61 ms
+메모리: 60.6 MB, 시간: 9.34 ms
 
 ### 구분
 

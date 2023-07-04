@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(my_string: String, is_suffix: String) = if (my_string.endsWith(is_suffix)) 1 else 0
+    fun solution(myString: String, isSuffix: String) = if (myString.endsWith(isSuffix)) 1 else 0
 }
