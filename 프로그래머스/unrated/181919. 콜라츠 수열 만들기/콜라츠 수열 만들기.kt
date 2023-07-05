@@ -1,17 +1,21 @@
+import java.util.Stack
+
 class Solution {
     fun solution(n: Int): IntArray {
-        var answer: IntArray = intArrayOf(n)
-        var num = n
-
-        while (num != 1) {
-            if (num % 2 == 0) {
-                num /= 2
+        var answer = Stack<Int>()
+        var n = n
+        
+        while(n != 1) {
+            answer.push(n)
+            
+            if(n % 2 == 0) {
+                n /= 2
             } else {
-                num = (3 * num) + 1
+                n = 3 * n + 1
             }
-            answer += num
         }
-
-        return answer
+        answer.push(1)
+        
+        return answer.toIntArray()
     }
 }
