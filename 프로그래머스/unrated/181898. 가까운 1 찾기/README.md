@@ -1,10 +1,10 @@
 # [unrated] 가까운 1 찾기 - 181898 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181898) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181898?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 61.5 MB, 시간: 3.18 ms
+메모리: 63.7 MB, 시간: 15.85 ms
 
 ### 구분
 
