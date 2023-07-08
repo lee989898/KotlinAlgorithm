@@ -1,10 +1,10 @@
 # [unrated] 배열 만들기 3 - 181895 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895) 
 
 ### 성능 요약
 
-메모리: 64.1 MB, 시간: 23.82 ms
+메모리: 63.8 MB, 시간: 27.29 ms
 
 ### 구분
 

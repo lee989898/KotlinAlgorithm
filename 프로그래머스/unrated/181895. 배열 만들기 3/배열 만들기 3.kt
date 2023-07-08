@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(arr: IntArray, intervals: Array<IntArray>) = arr.slice(intervals[0][0]..intervals[0][1]) + arr.slice(intervals[1][0]..intervals[1][1])
+    fun solution(arr: IntArray, intervals: Array<IntArray>) = intervals.flatMap { ints -> arr.sliceArray(IntRange(ints[0], ints[1])).toList() }
 }
