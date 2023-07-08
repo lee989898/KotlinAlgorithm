@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(my_string: String) = my_string.toList().distinct().joinToString("")
+    fun solution(my_string: String) = my_string.toSet().joinToString("")
 }
