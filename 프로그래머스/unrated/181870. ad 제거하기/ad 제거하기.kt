@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(strArr: Array<String>) = strArr.filter { !it.contains("ad") }
+    fun solution(strArr: Array<String>) = strArr.filterNot { it.contains("ad") }
 }
