@@ -1,9 +1,13 @@
 class Solution {
-    fun solution(arr: IntArray, n: Int): List<Int> {
-        return if (arr.size % 2 != 0) {
-            arr.mapIndexed { index, i -> if (index % 2 == 0) i + n else i }
+    fun solution(arr: IntArray, n: Int): IntArray {
+        var answer: IntArray = arr
+        
+        if(arr.size % 2 == 0) {
+            (1 until arr.size step 2).forEach { answer[it] += n }
         } else {
-            arr.mapIndexed { index, i -> if (index % 2 != 0) i + n else i }
+            (0 until arr.size step 2).forEach { answer[it] += n }
         }
+        
+        return answer
     }
 }
