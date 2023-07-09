@@ -1,10 +1,10 @@
 # [unrated] x 사이의 개수 - 181867 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181867?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181867) 
 
 ### 성능 요약
 
-메모리: 64 MB, 시간: 16.21 ms
+메모리: 64 MB, 시간: 17.59 ms
 
 ### 구분
 

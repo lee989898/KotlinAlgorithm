@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(myString: String) = myString.split('x').map { it.length }
+    fun solution(myString: String) = myString.split("x").map { it.length }
 }
