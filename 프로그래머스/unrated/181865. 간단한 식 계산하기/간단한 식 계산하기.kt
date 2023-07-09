@@ -1,9 +1,12 @@
 class Solution {
-    fun solution(binomial: String): Int = binomial.split(" ").let {
-            when(it[1]) {
-                "+" -> it[0].toInt() + it[2].toInt()
-                "-" -> it[0].toInt() - it[2].toInt()
-                else -> it[0].toInt() * it[2].toInt()
-            }
+    fun solution(binomial: String): Long {
+        val (a, b, c) = binomial.split(" ")
+        return if (b == "+") {
+            a.toLong() + c.toLong()
+        } else if (b == "-") {
+            a.toLong() - c.toLong()
+        } else {
+            a.toLong() * c.toLong()
         }
+    }
 }
