@@ -1,14 +1,5 @@
 class Solution {
-    fun solution(arr: IntArray, k: Int): MutableList<Int> {
-        val answer = arr.toSet().toMutableList()
-
-        return if(answer.size >= k) {
-            answer.take(k).toMutableList()
-        } else {
-            repeat(k - answer.size) {
-                answer.add(-1)
-            }
-            answer
-        }
+    fun solution(arr: IntArray, k: Int): List<Int> {
+        return (0 until k).map { if (it >= arr.toSet().size) -1 else arr.distinct()[it] }
     }
 }

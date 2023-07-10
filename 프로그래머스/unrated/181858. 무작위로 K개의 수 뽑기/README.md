@@ -1,10 +1,10 @@
 # [unrated] 무작위로 K개의 수 뽑기 - 181858 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181858?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181858) 
 
 ### 성능 요약
 
-메모리: 70.9 MB, 시간: 37.61 ms
+메모리: 371 MB, 시간: 1216.00 ms
 
 ### 구분
 
