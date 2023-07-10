@@ -13,6 +13,6 @@ class Solution {
             }
         }
 
-        return answer.toSet()
+        return answer
     }
 }
