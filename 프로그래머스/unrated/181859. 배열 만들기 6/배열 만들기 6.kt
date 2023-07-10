@@ -1,29 +1,19 @@
-import java.util.*
+import java.util.*;
 
 class Solution {
-    fun solution(arr: IntArray): IntArray {
+    fun solution(arr: IntArray): Stack<Int> {
         val stk = Stack<Int>()
-        var i = 0
 
-        while (i < arr.size) {
-            if(stk.isEmpty()) {
+        for (i in arr.indices) {
+            if (stk.isEmpty()) {
                 stk.push(arr[i])
-                i += 1
+            } else if (stk.peek() == arr[i]) {
+                stk.pop()
             } else {
-                if (stk.peek() == arr[i]) {
-                    stk.pop()
-                    i += 1
-                } else {
-                    stk.push(arr[i])
-                    i += 1
-                }
+                stk.push(arr[i])
             }
         }
-        
-        if (stk.isEmpty()) {
-            return intArrayOf(-1)
-        }
-
-        return stk.toIntArray()
+        if (stk.isEmpty()) stk.push(-1)
+        return stk
     }
 }
